@@ -7,7 +7,7 @@ variables:
       - template: $(Build.SourcesDirectory)/config-infra-prod.yml
   - ${{ if ne(variables['Build.SourceBranchName'], 'main') }}:
       # 'develop' or feature branches: DEV environment
-      - template: $(Build.SourcesDirectory)/config-infra-dev.yml
+      - template: config-infra-dev.yml
   - name: version
     value: aml-cli-v2
   # - group: env-variables
